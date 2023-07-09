@@ -1,3 +1,12 @@
+"""
+This file contains the Generator class which is used to generate responses using the OpenAI API.
+The Generator class takes a configuration and a maximum retry count as input.
+It uses the Composer class to get new messages and then tries to generate a response using the OpenAI API.
+If the generation fails, it retries up to the maximum retry count.
+If it still fails after the maximum retries, it raises an exception.
+The generated response is then parsed and returned as a dictionary.
+"""
+
 import openai
 from examples.composer import Composer
 import json
