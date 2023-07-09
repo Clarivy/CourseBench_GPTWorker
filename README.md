@@ -28,9 +28,11 @@ pip install -r requirements.txt
 
 ## Usage
 
-To start the server, run the following command:
+To start the server, you need to set the "OPENAI_API_BASE" and "OPENAI_API_KEY" environment variables. You can do this in the terminal before running the server:
 
 ```bash
+export OPENAI_API_BASE='your_openai_api_base'
+export OPENAI_API_KEY='your_openai_api_key'
 uvicorn app:app --port 80 --host 0.0.0.0
 ```
 
@@ -45,11 +47,11 @@ To use the /v1/generate endpoint, send a POST request with a JSON body containin
 
 ## Docker
 
-A Dockerfile is provided for containerization. To build and run the Docker container, use the following commands:
+A Dockerfile is provided for containerization. To build and run the Docker container, you need to pass the "OPENAI_API_BASE" and "OPENAI_API_KEY" as environment variables. Use the following commands:
 
 ```bash
 docker build -t course-feedback-refinement-system .
-docker run -p 80:80 course-feedback-refinement-system
+docker run -p 80:80 -e OPENAI_API_BASE='your_openai_api_base' -e OPENAI_API_KEY='your_openai_api_key' course-feedback-refinement-system
 ```
 
 ## Testing
