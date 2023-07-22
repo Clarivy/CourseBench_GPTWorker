@@ -45,6 +45,16 @@ To use the /v1/generate endpoint, send a POST request with a JSON body containin
 }
 ```
 
+Then, the response could be:
+
+```json
+{
+  "title": "AAAA",
+  "content": "BBBB",
+  "reason": "XXXX"
+}
+```
+
 ## Docker
 
 A Dockerfile is provided for containerization. To build and run the Docker container, you need to pass the "OPENAI_API_BASE" and "OPENAI_API_KEY" as environment variables. Use the following commands:
@@ -56,7 +66,21 @@ docker run -p 80:80 -e OPENAI_API_BASE='your_openai_api_base' -e OPENAI_API_KEY=
 
 ## Testing
 
-Test cases are provided in the testcases directory. Each test case is a markdown file containing a message that needs to be refined.
+Test cases are provided in the testcases directory. Each test case is a json file containing a message that needs to be refined.
+
+You need to install ``Gradio`` first:
+
+```
+pip install gradio
+```
+
+Then, run test script
+
+```
+python test.py
+```
+
+The interactive interface will be shown in the browser, by default, it will be shown in ``http://127.0.0.1:7860/``. You can click the "Generate" button to generate the refined message. The refined message will be shown in the "Output" box.
 
 ## Contributing
 
