@@ -28,7 +28,7 @@ class Generator:
         while retry_count < self.max_retry:
             try:
                 response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo", messages=messages
+                    model="gpt-3.5-turbo-16k", messages=messages
                 )
                 response_dict = response["choices"][0]["message"]["content"]
                 pattern = r"\{(.*?)\}"
