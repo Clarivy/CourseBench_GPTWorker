@@ -2,15 +2,15 @@
 
 This project is a FastAPI application that uses a GPT generator to refine the language used in forum messages. The system filters out inappropriate words or phrases, ensuring a positive and constructive environment for university students to discuss and comment on their courses.
 
-The refinement is following code below in ``example/system.txt``
+The refinement is following code below in `example/system.txt`
 
-* Leaving well-structured and informative messages unaltered
-* Preserving main points of critical and emotive messages while removing offensive language
-* Transforming highly emotional messages into more objective ones
-* Restructuring incoherent or disorganized messages to improve clarity
-* If encountering unfamiliar words or phrases, feel free to disregard them
-* For messages containing sarcastic or mocking, maintain the original content as long as it does not include insults directed at a professor's character
-* Negative comments about courses or teaching methods are permissible, but refrain from using offensive words regarding a professor's personality.
+- Leaving well-structured and informative messages unaltered
+- Preserving main points of critical and emotive messages while removing offensive language
+- Transforming highly emotional messages into more objective ones
+- Restructuring incoherent or disorganized messages to improve clarity
+- If encountering unfamiliar words or phrases, feel free to disregard them
+- For messages containing sarcastic or mocking, maintain the original content as long as it does not include insults directed at a professor's character
+- Negative comments about courses or teaching methods are permissible, but refrain from using offensive words regarding a professor's personality.
 
 ## Features
 
@@ -68,7 +68,7 @@ docker run -p 80:80 -e OPENAI_API_BASE='your_openai_api_base' -e OPENAI_API_KEY=
 
 Test cases are provided in the testcases directory. Each test case is a json file containing a message that needs to be refined.
 
-You need to install ``Gradio`` first:
+You need to install `Gradio` first:
 
 ```
 pip install gradio
@@ -80,7 +80,7 @@ Then, run test script
 python test.py
 ```
 
-The interactive interface will be shown in the browser, by default, it will be shown in ``http://127.0.0.1:7860/``. You can click the "Generate" button to generate the refined message. The refined message will be shown in the "Output" box.
+The interactive interface will be shown in the browser, by default, it will be shown in `http://127.0.0.1:7860/`. You can click the "Generate" button to generate the refined message. The refined message will be shown in the "Output" box.
 
 ## Contributing
 
