@@ -22,13 +22,13 @@ class Generator:
         self.composer = Composer(config=config)
         self.max_retry = max_retry
 
-    def generate(self, response_dict: str, title: str) -> dict:
+    def generate(self, response_dict: str, title: str, model="gpt-3.5-turbo-16k") -> dict:
         messages = self.composer.get_new_messages(content=response_dict, title=title)
         retry_count = 0
         while retry_count < self.max_retry:
             try:
                 response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo-16k", messages=messages
+                    model=model, messages=messages
                 )
                 response_dict = response["choices"][0]["message"]["content"]
                 # pattern = r"\{(.*?)\}"
