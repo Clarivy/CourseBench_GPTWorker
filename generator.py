@@ -11,7 +11,7 @@ import openai
 from examples.composer import Composer
 import json
 import os
-import re
+# import re
 
 if os.environ.get("OPENAI_API_BASE", None):
     openai.api_base = os.environ["OPENAI_API_BASE"]
@@ -31,9 +31,9 @@ class Generator:
                     model="gpt-3.5-turbo-16k", messages=messages
                 )
                 response_dict = response["choices"][0]["message"]["content"]
-                pattern = r"\{(.*?)\}"
-                match = re.search(pattern, response_dict, flags=re.DOTALL)
-                response_dict = json.loads(match.group(0))
+                # pattern = r"\{(.*?)\}"
+                # match = re.search(pattern, response_dict, flags=re.DOTALL)
+                response_dict = json.loads(response_dict)
                 assert "title" in response_dict
                 assert "content" in response_dict
                 assert "reason" in response_dict
