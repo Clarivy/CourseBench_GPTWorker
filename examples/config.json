@@ -9,7 +9,15 @@
   },
   {
     "role": "assistant",
+    "content_file": "examples/response_000.json"
+  },
+  {
+    "role": "user",
     "content_file": "examples/example_001.md"
+  },
+  {
+    "role": "assistant",
+    "content_file": "examples/response_001.json"
   },
   {
     "role": "user",
@@ -17,7 +25,15 @@
   },
   {
     "role": "assistant",
+    "content_file": "examples/response_002.json"
+  },
+  {
+    "role": "user",
     "content_file": "examples/example_003.md"
+  },
+  {
+    "role": "assistant",
+    "content_file": "examples/response_003.json"
   },
   {
     "role": "user",
@@ -25,22 +41,14 @@
   },
   {
     "role": "assistant",
+    "content_file": "examples/response_004.json"
+  },
+  {
+    "role": "user",
     "content_file": "examples/example_005.md"
   },
   {
-    "role": "user",
-    "content_file": "examples/example_006.md"
-  },
-  {
     "role": "assistant",
-    "content_file": "examples/example_007.md"
-  },
-  {
-    "role": "user",
-    "content_file": "examples/example_008.md"
-  },
-  {
-    "role": "assistant",
-    "content_file": "examples/example_009.md"
+    "content_file": "examples/response_005.json"
   }
 ]
