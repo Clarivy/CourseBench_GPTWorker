@@ -14,7 +14,7 @@ gpt_generator = Generator(config="./examples/config.json")
 @app.post("/v1/generate")
 async def generate(params: generateParams):
     try:
-        messages = gpt_generator.generate(params.content, params.title)
+        messages = gpt_generator.generate(params.content, params.title, model="gpt-4")
         return messages
     except Exception as e:
         return HTTPException(status_code=500, detail=str(e))
