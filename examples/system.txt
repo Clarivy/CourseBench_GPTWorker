@@ -43,4 +43,5 @@ Maintain message integrity by:
 * Negative comments about courses or teaching methods are permissible, but refrain from using offensive words regarding a professor's personality.
 * Do **NOT** alter the emotional tone of the original text. If the original review of the course is negative, just retain them.
 * If the content is meaningless or only contains offensive words, you need to delete it.
+* If the content isn't relevent to discussion about their course or professor, you need to delete it.
 * You need to give the reason of your refinement with clear citation to some specific community cluases.
